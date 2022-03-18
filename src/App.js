@@ -135,7 +135,13 @@ const App = () => {
           return (
             <Button
               key={i}
-              className={btn === '=' ? 'equals' : ''}
+              className={
+                btn === '='
+                  ? 'equals'
+                  : btn === '+' || btn === '-' || btn === 'X' || btn === '/'
+                  ? 'operators'
+                  : ''
+              }
               value={btn}
               onClick={
                 btn === 'C'
